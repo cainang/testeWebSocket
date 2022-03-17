@@ -24,6 +24,8 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello world</h1>');
 });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+let port = process.env.PORT || 3000;
+
+server.listen(port, () => {
+  console.log('listening on *: ' + port);
 });
